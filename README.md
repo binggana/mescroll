@@ -14,7 +14,8 @@
 ## 目录:  
 
 * <a href="#功能亮点-">功能亮点 </a> <br/>
-* <a href="#快速入门-">快速入门 </a> <br/><br/>
+* <a href="#快速入门-">快速入门 </a> <br/>
+* <a href="http://www.mescroll.com/preview.html?name=list-products-vue">vue的示例 </a> <br/><br/>
 * <a href="#基础案例-base-demos-"><b>基础案例 base demos</b></a> <br/>
 * <a href="#中级案例-intermediate-demos-"><b>中级案例 intermediate demos</b></a> <br/>
 * <a href="#高级案例-senior-demos-"><b>高级案例 senior demos</b></a> <br/><br/>
@@ -108,7 +109,7 @@
         }
 ```  
 
-### mescroll在vue中的使用案例---------- <a href="http://www.mescroll.com/preview.html?name=list-products-vue" target="_blank">点此在线体验 </a> ---------- [点此查看源码](https://github.com/mescroll/mescroll/blob/master/demo/base/list-products-vue.html) ---------- 
+--- mescroll在vue中的使用案例---------- <a href="http://www.mescroll.com/preview.html?name=list-products-vue">点此在线体验 </a> ---------- [点此查看源码](https://github.com/mescroll/mescroll/blob/master/demo/base/list-products-vue.html) ---------- <br/>
 
 --- 以上为mescroll最基本的用法,强烈建议您下载并查看 <a href="#基础案例-base-demos-">mescroll基础案例</a> , 发现mescroll更强大的功能 ~<br/>
 --- 基础案例一共5个, 每个案例3分钟, 一共花您15分钟; 这15分钟您将了解mescroll在不同情况下应如何快速配置 ~<br/>
@@ -408,7 +409,7 @@ var mescroll = new MeScroll("mescroll", { down: {下拉刷新的配置参数}, u
 	</tr>
 	<tr align="center">
 		<td>mescroll.resetUpScroll( isShowLoading );</td>
-		<td>重置列表 (常用于列表筛选条件变化或切换菜单时重新刷新列表数据)<br />isShowLoading 是否显示下拉或者上拉的进度布局; <br />1. 不传参或传true,则显示进度布局,默认不传参; <br />2. 传false则不显示进度布局 (常用于静默更新列表数据);</td>
+		<td>重置列表为第一页 (常用于列表筛选条件变化或切换菜单时重新刷新列表数据)<br />内部实现: 把page.num=1,再主动触发up.callback <a href="code.html#tagResetUpScroll">参见源码</a><br />isShowLoading 是否显示进度布局; <br />1.默认null,不传参,则显示上拉加载的进度布局 <br />2.传参true, 则显示下拉刷新的进度布局<br />3.传参false,则不显示上拉和下拉的进度 (常用于静默更新列表数据)</td>
 	</tr>
 	<tr align="center">
 		<td>mescroll.triggerDownScroll();</td>
